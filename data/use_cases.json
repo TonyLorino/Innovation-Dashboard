@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "title": "Driving Results with AI: Use Cases & Estimated Impact",
+    "source": "AI Portfolio Executive Summary",
+    "last_updated": "2026-02-11"
+  },
+  "use_cases": [
+    {
+      "id": 1,
+      "name": "Nexus",
+      "status": "In Production",
+      "department": "Global",
+      "owner": "K. Chance",
+      "headline_impact": "70-90% time savings; available to all employees at no licensing cost"
+    },
+    {
+      "id": 2,
+      "name": "n8n",
+      "status": "In Production",
+      "department": "Global",
+      "owner": "Various",
+      "headline_impact": "Automate workflows in weeks; 20-50% reduction in development time"
+    },
+    {
+      "id": 3,
+      "name": "Magellan (Land)",
+      "status": "POC Done",
+      "department": "Land Intelligence",
+      "owner": "A. Alves",
+      "headline_impact": "$10M cost avoidance; $100M+ first-mover upside"
+    },
+    {
+      "id": 4,
+      "name": "Magellan (Power)",
+      "status": "POC Done",
+      "department": "Available Power Analysis",
+      "owner": "I. Black",
+      "headline_impact": "Power availability insights for site selection"
+    },
+    {
+      "id": 5,
+      "name": "Magellan (Network)",
+      "status": "POC Done",
+      "department": "Networking & Interconnect",
+      "owner": "TBD",
+      "headline_impact": "Network and interconnection analysis"
+    },
+    {
+      "id": 6,
+      "name": "Magellan (Product)",
+      "status": "POC Done",
+      "department": "Product Market Fit",
+      "owner": "S. Mills",
+      "headline_impact": "Product-market fit analysis"
+    },
+    {
+      "id": 7,
+      "name": "Magellan (Policy)",
+      "status": "POC Done",
+      "department": "Policy & Regulatory",
+      "owner": "TBD",
+      "headline_impact": "Policy and regulatory insights"
+    },
+    {
+      "id": 8,
+      "name": "RFP Process",
+      "status": "POC Done",
+      "department": "Sales / P&E",
+      "owner": "Sales / P&E",
+      "headline_impact": "$300K license savings replacing Loopio/Responsive"
+    },
+    {
+      "id": 9,
+      "name": "Lead Routing",
+      "status": "POC Done",
+      "department": "RevOps",
+      "owner": "Z. Gillis",
+      "headline_impact": "2-4 FTEs ($180K); 30-40% productivity boost; $100K software savings"
+    },
+    {
+      "id": 10,
+      "name": "HR AI Chat Agent",
+      "status": "POC Done",
+      "department": "HR",
+      "owner": "S. Logan",
+      "headline_impact": "4-6 FTEs; cut ticket volume 25-45%"
+    },
+    {
+      "id": 11,
+      "name": "Invoice Processing",
+      "status": "POC Done",
+      "department": "Finance",
+      "owner": "L. Karahalios",
+      "headline_impact": "2 FTEs; $25K/month ($300K/year) savings"
+    },
+    {
+      "id": 12,
+      "name": "NexusOS",
+      "status": "POC In Progress",
+      "department": "Global",
+      "owner": "K. Chance",
+      "headline_impact": "Next-generation AI operating system for enterprise workflows"
+    },
+    {
+      "id": 13,
+      "name": "Call Center Automation",
+      "status": "POC In Progress",
+      "department": "Global",
+      "owner": "B. Van der Steen",
+      "headline_impact": "Faster customer response; decrease time to revenue"
+    },
+    {
+      "id": 14,
+      "name": "Resume Recommendations",
+      "status": "POC In Progress",
+      "department": "HR",
+      "owner": "C. Hunter",
+      "headline_impact": "80% reduction in screening time"
+    }
+  ]
+}

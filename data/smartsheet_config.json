@@ -1,0 +1,10 @@
+{
+  "sheet_id": "2092977909354372",
+  "column_map": {
+    "name": "Project Name",
+    "status": "Status",
+    "department": "Department",
+    "owner": "Sponsor",
+    "headline_impact": "Headline Impact"
+  }
+}
