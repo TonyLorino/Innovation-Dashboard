@@ -66,7 +66,7 @@ def fetch_smartsheet_data() -> dict[str, Any]:
     Requires SMARTSHEET_API_TOKEN env var and a valid sheet_id in
     data/smartsheet_config.json.
     """
-    token = os.environ.get("SMARTSHEET_API_TOKEN", "")
+    token = os.environ.get("SMARTSHEET_API_TOKEN", "").strip()
     if not token:
         raise RuntimeError(
             "SMARTSHEET_API_TOKEN environment variable is not set. "

@@ -23,7 +23,7 @@ def _load_config() -> dict[str, Any]:
 
 def _fetch_smartsheet_data() -> dict[str, Any]:
     """Call the Smartsheet API and return data in the same shape as use_cases.json."""
-    token = os.environ.get("SMARTSHEET_API_TOKEN", "")
+    token = os.environ.get("SMARTSHEET_API_TOKEN", "").strip()
     if not token:
         raise RuntimeError("SMARTSHEET_API_TOKEN is not configured.")
 
