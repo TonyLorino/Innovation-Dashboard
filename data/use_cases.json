@@ -4,6 +4,12 @@
     "source": "AI Portfolio Executive Summary",
     "last_updated": "2026-02-11"
   },
+  "summary": {
+    "total_initiatives": 14,
+    "in_production": 2,
+    "poc_done": 9,
+    "poc_in_progress": 3
+  },
   "use_cases": [
     {
       "id": 1,

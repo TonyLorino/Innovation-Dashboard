@@ -407,7 +407,7 @@
 <div class="section-title">Initiative Pipeline</div>
 <div class="pipeline-board" id="pipeline-board"></div>
 </div>
-<button class="export-btn" onclick="exportSlide('slide-section-1', 'pipeline-overview')">
+<button class="export-btn" onclick="exportSlide(event, 'slide-section-1', 'pipeline-overview')">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M13.75 7h-3V1.5a.75.75 0 00-1.5 0V7h-3a.75.75 0 00-.53 1.28l3.75 3.75a.75.75 0 001.06 0l3.75-3.75A.75.75 0 0013.75 7zM3 13.5a.75.75 0 01.75.75v1.5c0 .138.112.25.25.25h12a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 0116 17.5H4A1.75 1.75 0 012.25 15.75v-1.5a.75.75 0 01.75-.75z"/></svg>
     Export Slide
 </button>
@@ -430,7 +430,7 @@
     <tbody id="table-body"></tbody>
 </table>
 </div>
-<button class="export-btn" onclick="exportSlide('slide-section-2', 'portfolio-overview')">
+<button class="export-btn" onclick="exportSlide(event, 'slide-section-2', 'portfolio-overview')">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M13.75 7h-3V1.5a.75.75 0 00-1.5 0V7h-3a.75.75 0 00-.53 1.28l3.75 3.75a.75.75 0 001.06 0l3.75-3.75A.75.75 0 0013.75 7zM3 13.5a.75.75 0 01.75.75v1.5c0 .138.112.25.25.25h12a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 0116 17.5H4A1.75 1.75 0 012.25 15.75v-1.5a.75.75 0 01.75-.75z"/></svg>
     Export Slide
 </button>
@@ -446,7 +446,7 @@
 <div class="section-title">Recommended Next Steps</div>
 <ul class="reco-list" id="reco-list"></ul>
 </div>
-<button class="export-btn" onclick="exportSlide('slide-section-3', 'highlights-and-next-steps')">
+<button class="export-btn" onclick="exportSlide(event, 'slide-section-3', 'highlights-and-next-steps')">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M13.75 7h-3V1.5a.75.75 0 00-1.5 0V7h-3a.75.75 0 00-.53 1.28l3.75 3.75a.75.75 0 001.06 0l3.75-3.75A.75.75 0 0013.75 7zM3 13.5a.75.75 0 01.75.75v1.5c0 .138.112.25.25.25h12a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 0116 17.5H4A1.75 1.75 0 012.25 15.75v-1.5a.75.75 0 01.75-.75z"/></svg>
     Export Slide
 </button>
@@ -759,7 +759,7 @@ updateThemeIcon();
 
 <!-- ═══ Slide Export Logic ═══ -->
 <script>
-async function exportSlide(sectionId, filename) {
+async function exportSlide(evt, sectionId, filename) {
     const SLIDE_W = 1920;
     const SLIDE_H = 1080;
     const PADDING = 60;       /* inner padding inside the slide frame */
@@ -768,7 +768,7 @@ async function exportSlide(sectionId, filename) {
     if (!section) return;
 
     /* Disable button while exporting */
-    const btn = event.currentTarget;
+    const btn = evt.currentTarget;
     const origLabel = btn.innerHTML;
     btn.disabled = true;
     btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="animation:spin 1s linear infinite"><path fill-rule="evenodd" d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.451a.75.75 0 000-1.5H4.5a.75.75 0 00-.75.75v3.75a.75.75 0 001.5 0v-1.578l.164.152a7 7 0 0011.712-3.138.75.75 0 00-1.449-.396zm.376-5.174a.75.75 0 00-1.5 0v1.578l-.164-.152a7 7 0 00-11.712 3.138.75.75 0 101.449.396 5.5 5.5 0 019.201-2.466l.312.311h-2.451a.75.75 0 000 1.5H15.5a.75.75 0 00.75-.75v-3.75z" clip-rule="evenodd"/></svg> Exporting\u2026';

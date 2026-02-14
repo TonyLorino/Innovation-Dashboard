@@ -13,7 +13,7 @@ Usage:
     # Just add SMARTSHEET_API_TOKEN=your_token to .env and run:
     python3 server.py
 
-Then open http://localhost:8080/board-summary/index.html
+Then open http://localhost:8080
 """
 
 import json

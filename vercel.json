@@ -1,9 +1,6 @@
 {
   "buildCommand": "",
   "outputDirectory": "",
-  "rewrites": [
-    { "source": "/api/use-cases", "destination": "/api/use-cases" }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
