@@ -17,6 +17,7 @@
       "status": "In Production",
       "department": "Global",
       "owner": "K. Chance",
+      "purpose": "AI Built on DLR Data",
       "headline_impact": "70-90% time savings; available to all employees at no licensing cost"
     },
     {
@@ -25,6 +26,7 @@
       "status": "In Production",
       "department": "Global",
       "owner": "Various",
+      "purpose": "Automated Workflows",
       "headline_impact": "Automate workflows in weeks; 20-50% reduction in development time"
     },
     {
@@ -33,6 +35,7 @@
       "status": "POC Done",
       "department": "Land Intelligence",
       "owner": "A. Alves",
+      "purpose": "Land Intelligence",
       "headline_impact": "$10M cost avoidance; $100M+ first-mover upside"
     },
     {
@@ -41,6 +44,7 @@
       "status": "POC Done",
       "department": "Available Power Analysis",
       "owner": "I. Black",
+      "purpose": "Available Power Analysis",
       "headline_impact": "Power availability insights for site selection"
     },
     {
@@ -49,6 +53,7 @@
       "status": "POC Done",
       "department": "Networking & Interconnect",
       "owner": "TBD",
+      "purpose": "Networking & Interconnect",
       "headline_impact": "Network and interconnection analysis"
     },
     {
@@ -57,6 +62,7 @@
       "status": "POC Done",
       "department": "Product Market Fit",
       "owner": "S. Mills",
+      "purpose": "Product Market Fit",
       "headline_impact": "Product-market fit analysis"
     },
     {
@@ -65,6 +71,7 @@
       "status": "POC Done",
       "department": "Policy & Regulatory",
       "owner": "TBD",
+      "purpose": "Policy & Regulatory Insights",
       "headline_impact": "Policy and regulatory insights"
     },
     {
@@ -73,6 +80,7 @@
       "status": "POC Done",
       "department": "Sales / P&E",
       "owner": "Sales / P&E",
+      "purpose": "Automate RFP Responses",
       "headline_impact": "$300K license savings replacing Loopio/Responsive"
     },
     {
@@ -81,6 +89,7 @@
       "status": "POC Done",
       "department": "RevOps",
       "owner": "Z. Gillis",
+      "purpose": "Automatically Assign Leads",
       "headline_impact": "2-4 FTEs ($180K); 30-40% productivity boost; $100K software savings"
     },
     {
@@ -89,6 +98,7 @@
       "status": "POC Done",
       "department": "HR",
       "owner": "S. Logan",
+      "purpose": "Automate Common Empl HR Tasks",
       "headline_impact": "4-6 FTEs; cut ticket volume 25-45%"
     },
     {
@@ -97,6 +107,7 @@
       "status": "POC Done",
       "department": "Finance",
       "owner": "L. Karahalios",
+      "purpose": "Automate Invoice Processing",
       "headline_impact": "2 FTEs; $25K/month ($300K/year) savings"
     },
     {
@@ -105,6 +116,7 @@
       "status": "POC In Progress",
       "department": "Global",
       "owner": "K. Chance",
+      "purpose": "DLR's AI Operating System",
       "headline_impact": "Next-generation AI operating system for enterprise workflows"
     },
     {
@@ -113,6 +125,7 @@
       "status": "POC In Progress",
       "department": "Global",
       "owner": "B. Van der Steen",
+      "purpose": "AI Voice-Driven Intelligent Call Routing",
       "headline_impact": "Faster customer response; decrease time to revenue"
     },
     {
@@ -121,6 +134,7 @@
       "status": "POC In Progress",
       "department": "HR",
       "owner": "C. Hunter",
+      "purpose": "Resume Recommendations",
       "headline_impact": "80% reduction in screening time"
     }
   ]

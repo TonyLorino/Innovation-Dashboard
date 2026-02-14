@@ -5,6 +5,7 @@
     "status": "Status",
     "department": "Department",
     "owner": "Sponsor",
-    "headline_impact": "Headline Impact"
+    "headline_impact": "Headline Impact",
+    "purpose": "Purpose"
   }
 }
