@@ -181,7 +181,7 @@ if __name__ == "__main__":
     load_dotenv()
     server = HTTPServer(("", PORT), AppHandler)
     print(f"[server] Serving on http://localhost:{PORT}")
-    print(f"[server] Board summary: http://localhost:{PORT}/board-summary/index.html")
+    print(f"[server] Dashboard: http://localhost:{PORT}")
     if os.environ.get("SMARTSHEET_API_TOKEN"):
         print("[server] Smartsheet API token detected — /api/use-cases is available")
     else:

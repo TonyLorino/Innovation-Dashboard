@@ -5,12 +5,16 @@ A polished, print-ready executive one-pager for the **"Driving Results with AI"*
 ## Project Structure
 
 ```
+├── index.html                  # Executive one-pager (root page, print/PDF-ready)
 ├── board-summary/
-│   └── index.html              # Executive one-pager (print/PDF-ready)
+│   └── index.html              # Legacy path (kept for backwards compat)
+├── api/
+│   └── use-cases.py            # Vercel serverless function (Smartsheet proxy)
 ├── data/
 │   ├── use_cases.json          # Local data (manual/offline mode)
 │   └── smartsheet_config.json  # Smartsheet sheet ID & column mapping
 ├── server.py                   # Local dev server + Smartsheet API proxy
+├── vercel.json                 # Vercel deployment config
 ├── .env.example                # Template for API token
 ├── .gitignore
 └── README.md
@@ -36,7 +40,7 @@ cp .env.example .env
 python3 server.py
 
 # 4. Open in your browser
-open http://localhost:8080/board-summary/index.html
+open http://localhost:8080
 ```
 
 The page loads data from `data/use_cases.json` by default. To pull live data from the [AI Innovation List](https://app.smartsheet.com/sheets/c9xQm5P5Vp4Gph8Xq2hCw9jWw9vWJjC8R78xchh1?view=grid) Smartsheet, set up a `.env` file (see [Smartsheet Setup](#smartsheet-setup)) and switch `DATA_SOURCE` to `"smartsheet"` in `index.html`.
@@ -45,14 +49,14 @@ To export as PDF, use **Cmd + P** (or Ctrl + P) and select **Save as PDF**.
 
 ## Switching Between JSON and Smartsheet
 
-The data source is controlled by a single constant on **line 468** of `board-summary/index.html`:
+The data source is controlled by a single constant in `index.html` (near line 468):
 
 ```js
+const DATA_SOURCE = "smartsheet";  // ← live from Smartsheet API (default)
 const DATA_SOURCE = "json";        // ← local file
-const DATA_SOURCE = "smartsheet";  // ← live from Smartsheet API
 ```
 
-Change the value and refresh the page. Only one line should be active (the other should be deleted or commented out).
+The default is `"smartsheet"`. Change the value and refresh the page. Only one line should be active (the other should be deleted or commented out).
 
 | Mode | What it does | Server command |
 |---|---|---|
@@ -145,6 +149,30 @@ Add an entry to the `use_cases` array:
 Delete the entire `{ ... }` block for that entry and ensure the remaining JSON array has no trailing commas.
 
 After editing, refresh the page (make sure `DATA_SOURCE = "json"`).
+
+## Deploy to Vercel
+
+The project is ready to deploy to [Vercel](https://vercel.com) with zero build configuration. The dashboard is served as a static page at the root URL, and the Smartsheet proxy runs as a Python serverless function at `/api/use-cases`.
+
+### 1. Import the repo
+
+1. Go to [vercel.com/new](https://vercel.com/new)
+2. Import your GitHub repository
+3. Leave all build settings at their defaults — no framework, no build command needed
+
+### 2. Add your API token
+
+1. In the Vercel project dashboard, go to **Settings → Environment Variables**
+2. Add a variable:
+   - **Name:** `SMARTSHEET_API_TOKEN`
+   - **Value:** your Smartsheet API token
+3. Click **Save**
+
+### 3. Deploy
+
+Click **Deploy** (or push to your main branch). The site will be live at your Vercel URL with live Smartsheet data — no further configuration needed.
+
+> **How it works:** The `api/use-cases.py` serverless function reads the token from the environment variable, calls the Smartsheet API, and returns the data. The API key never reaches the browser. Responses are cached for 60 seconds with stale-while-revalidate for performance.
 
 ## Features
 

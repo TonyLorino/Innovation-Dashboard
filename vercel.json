@@ -1,0 +1,15 @@
+{
+  "buildCommand": "",
+  "outputDirectory": "",
+  "rewrites": [
+    { "source": "/api/use-cases", "destination": "/api/use-cases" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "s-maxage=60, stale-while-revalidate=300" }
+      ]
+    }
+  ]
+}
